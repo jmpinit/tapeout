@@ -1,7 +1,12 @@
 (ns tapeout.core
-  (:require [clojure.browser.repl :as repl]))
+  (:require [clojure.browser.repl :as repl]
+    [tapeout.utilities :as util]
+    [tapeout.layer :as layer]))
 
 (enable-console-print!)
+
+(def testLayer (layer/createTest))
+(util/append testLayer)
 
 (def THREE js/THREE)
 
